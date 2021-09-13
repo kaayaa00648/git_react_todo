@@ -111,10 +111,10 @@ export const App = () => {
         <ul>
           {incompleteTodos.map((newTitle, index) => {
             return (
-              <div key={newTitle} className="list-row">
+              <div key={index} className="list-row">
                 <li>{newTitle}</li>
                 <button onClick={() => onClickComplete(index)}>完了</button>
-                <button key={editIndex} onClick={() => openEditForm(index)}>
+                <button onClick={() => openEditForm(index)}>
                   編集
                 </button>
                 {/* 関数に引数を渡す場合アロー関数で記述 */}
